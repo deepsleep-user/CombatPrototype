@@ -1,0 +1,12 @@
+# Compiled executables
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Debug files
+*.pdb
+
+# VS Code local debug configuration
+.vscode/launch.json

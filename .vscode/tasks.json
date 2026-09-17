@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+
+    "tasks": [
+        {
+            "label": "Build Combat Prototype",
+            "type": "shell",
+
+            "command": "D:\\mingw64\\bin\\g++.exe",
+
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+
+                "-I",
+                "D:\\raylib-master\\src",
+
+                "${workspaceFolder}\\code\\main.cpp",
+                "${workspaceFolder}\\code\\character\\Character.cpp",
+                "${workspaceFolder}\\code\\ai\\BossAI.cpp",
+                "${workspaceFolder}\\code\\combat\\CombatSystem.cpp",
+                "${workspaceFolder}\\code\\animation\\AnimationSystem.cpp",
+                "${workspaceFolder}\\code\\resources\\GameAssets.cpp",
+                "${workspaceFolder}\\code\\physics\\CollisionSystem.cpp",
+
+                "-L",
+                "D:\\raylib-master\\src",
+
+                "-lraylib",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm",
+
+                "-o",
+                "${workspaceFolder}\\build\\CombatPrototype.exe"
+            ],
+
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "C:\\Windows\\System32;${env:PATH}"
+                }
+            },
+
+            "problemMatcher": [
+                "$gcc"
+            ],
+
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
